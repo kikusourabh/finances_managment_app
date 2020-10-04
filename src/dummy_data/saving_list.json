@@ -1,0 +1,26 @@
+[
+  {
+    "key": "1",
+    "icon": "coins",
+    "icon_tag": "FontAwesome5",
+    "title": "Mutal funds",
+    "description": "3 sip",
+    "amount": "3000"
+  },
+  {
+    "key": "2",
+    "icon": "local-hospital",
+    "icon_tag": "MaterialIcons",
+    "title": "Health insaurances",
+    "description": "monthly premium",
+    "amount": "1200"
+  },
+  {
+    "key": "3",
+    "icon": "chart-line",
+    "icon_tag": "FontAwesome5",
+    "title": "Stock-market",
+    "description": "investment on shares",
+    "amount": "5000"
+  }
+]

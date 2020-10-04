@@ -1,0 +1,26 @@
+[
+  {
+    "key": "1",
+    "icon": "fastfood",
+    "icon_tag": "MaterialIcons",
+    "title": "Sunday-treat",
+    "description": "manchurian",
+    "amount": "100"
+  },
+  {
+    "key": "2",
+    "icon": "shopping-cart",
+    "icon_tag": "Feather",
+    "title": "Home-grocery",
+    "description": "esentials",
+    "amount": "150"
+  },
+  {
+    "key": "3",
+    "icon": "bike",
+    "icon_tag": "MaterialCommunityIcons",
+    "title": "Bike",
+    "description": "petrol",
+    "amount": "200"
+  }
+]
