@@ -1,0 +1,26 @@
+[
+  {
+    "key": "1",
+    "icon": "money-bill",
+    "icon_tag": "FontAwesome5",
+    "title": "Salary",
+    "description": "monthly hustle",
+    "amount": "20,000"
+  },
+  {
+    "key": "2",
+    "icon": "business",
+    "icon_tag": "MaterialIcons",
+    "title": "side hustle",
+    "description": "passive income",
+    "amount": "5,000"
+  },
+  {
+    "key": "3",
+    "icon": "youtube",
+    "icon_tag": "MaterialCommunityIcons",
+    "title": "Video creation",
+    "description": "youtube channel",
+    "amount": "0"
+  }
+]
