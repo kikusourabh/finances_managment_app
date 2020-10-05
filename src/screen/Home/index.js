@@ -7,16 +7,25 @@ import LatestCard from '../../componets/LatestCard';
 import IOIcon from 'react-native-vector-icons/Ionicons';
 import Elist from '../../dummy_data/expenses_list.json';
 import Slist from '../../dummy_data/saving_list.json';
-import {FlatList} from 'react-native-gesture-handler';
+import {FlatList, TouchableOpacity} from 'react-native-gesture-handler';
 import ListItem from '../../componets/ListItem';
 
-function Home() {
+function Home({navigation}) {
   const [expenses_list, setExpenses_list] = useState(Elist);
   const [saving_list, setSaving_list] = useState(Slist);
 
   const ErenderItem = ({item}) => <ListItem item={item} />;
   const SrenderItem = ({item}) => <ListItem item={item} />;
 
+  const navigateToIncome = () => {
+    navigation.navigate('Income');
+  };
+  const navigateToExpenses = () => {
+    navigation.navigate('Expenses');
+  };
+  const navigateToSavings = () => {
+    navigation.navigate('Savings');
+  };
   return (
     <View style={STYLES_CONSTANT.mainContainer}>
       <View style={STYLES_CONSTANT.bodyContainer}>
@@ -29,6 +38,7 @@ function Home() {
               title="Income"
               amount="20,000"
               color={COLORS.primary}
+              onPress={navigateToIncome}
             />
 
             <LatestCard
@@ -40,6 +50,7 @@ function Home() {
               title="Expenses"
               amount="20,000"
               color={COLORS.acent}
+              onPress={navigateToExpenses}
             />
 
             <LatestCard
@@ -51,6 +62,7 @@ function Home() {
               title="Savings"
               amount="10,000"
               color={COLORS.primary}
+              onPress={navigateToSavings}
             />
           </View>
         </View>
@@ -69,7 +81,8 @@ function Home() {
                 color={COLORS.primary}
               />
             </View>
-            <View
+            <TouchableOpacity
+              onPress={navigateToExpenses}
               style={{
                 flex: 1,
                 flexDirection: 'row',
@@ -82,7 +95,7 @@ function Home() {
                 size={20}
                 color={COLORS.primary}
               />
-            </View>
+            </TouchableOpacity>
           </View>
           <FlatList
             data={expenses_list}
@@ -97,14 +110,15 @@ function Home() {
               alignItems: 'center',
             }}>
             <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
-              <Text style={STYLES_CONSTANT.titleText}>Expenses</Text>
+              <Text style={STYLES_CONSTANT.titleText}>Savings</Text>
               <IOIcon
                 name="ios-chevron-down"
                 size={20}
                 color={COLORS.primary}
               />
             </View>
-            <View
+            <TouchableOpacity
+              onPress={navigateToSavings}
               style={{
                 flex: 1,
                 flexDirection: 'row',
@@ -117,7 +131,7 @@ function Home() {
                 size={20}
                 color={COLORS.primary}
               />
-            </View>
+            </TouchableOpacity>
           </View>
           <FlatList
             data={saving_list}
